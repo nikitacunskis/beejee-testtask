@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <a href="/list/{CURRENT_PAGE}/username/{SORT_TYPE}" class="btn btn-info" role="button">Usernames</a>
+    <a href="/list/{CURRENT_PAGE}/email/{SORT_TYPE}" class="btn btn-info" role="button">E-mails</a>
+    <a href="/list/{CURRENT_PAGE}/status/{SORT_TYPE}" class="btn btn-info" role="button">Status</a>
+    | <a href="/create/" class="btn btn-info" role="button">Create</a>
+    {LOGIN_BUTTON}
+
+    <div class="panel-group">
+        {TASK_LIST}
+    </div>
+    <ul class="pagination">
+        {PAGINATION}
+    </ul>
+</body>
+</html>

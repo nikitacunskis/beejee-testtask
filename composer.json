@@ -1,0 +1,19 @@
+{
+  "name": "vendor_name/beejee",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Nikita Cunskis",
+      "email": "nikita.cunskis@gmail.com"
+    }
+  ],
+  "require": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Beejee\\": ["app/controller/", "app/model/"]
+    }
+  }
+}
