@@ -40,6 +40,8 @@ class ListController
     {
         $db = new Database();
         $result = $db->conn->query("SELECT COUNT(username) as c FROM tasks");
+        if($result->num_rows == 0)
+            return false;
         $count = $result->fetch_assoc()['c'] / $this->getPerPage();
         return $count;
     }
