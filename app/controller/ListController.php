@@ -26,6 +26,8 @@ class ListController
         $sortType = $db->conn->real_escape_string($sortType);
         $result = $db->conn->query("SELECT id, username, email, taskmessage, status, edited FROM tasks ORDER BY $sortBy $sortType LIMIT $firstEntry, " . $this->getPerPage());
 
+        if($result->num_rows == 0)
+            return false;
         $tasks = [];
         while($row = $result->fetch_assoc())
         {
