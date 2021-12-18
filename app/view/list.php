@@ -25,6 +25,14 @@
         $loginBtn->assign('ACTION', 'LOGIN');
         $tpl->assign('LOGIN_BUTTON', $loginBtn->fetch());
     }
+
+    if(!$tasks)
+    {
+        $tpl->assign("TASK_LIST", "", false);
+        $tpl->assign("PAGINATION", "", false);
+        $tpl->parse();
+        die;
+    }
     foreach ($tasks as $task)
     {
         $taskTpl = new \Beejee\Template('list_card');
